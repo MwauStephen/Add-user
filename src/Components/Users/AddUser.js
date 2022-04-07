@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./AddUser.module.css";
 
-const AddUser = () => {
+const AddUser = (props) => {
   return (
     <div>
       <form className={styles.input}>
