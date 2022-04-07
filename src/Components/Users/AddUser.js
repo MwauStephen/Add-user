@@ -1,13 +1,14 @@
 import React from "react";
+import styles from "./AddUser.module.css";
 
 const AddUser = () => {
   return (
     <div>
-      <form>
-        <label>Username:</label>
-        <input type="text" />
-        <label>Age(Years):</label>
-        <input type="number" />
+      <form className={styles.input}>
+        <label htmlFor="username">Username:</label>
+        <input type="text" id="username" />
+        <label htmlFor="age">Age(Years):</label>
+        <input type="number" id="age" />
       </form>
     </div>
   );
