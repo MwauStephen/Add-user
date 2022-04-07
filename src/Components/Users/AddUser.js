@@ -1,16 +1,17 @@
 import React from "react";
+import Card from "../UI/Card";
 import styles from "./AddUser.module.css";
 
 const AddUser = (props) => {
   return (
-    <div>
-      <form className={styles.input}>
+    <Card className={styles.input}>
+      <form>
         <label htmlFor="username">Username:</label>
         <input type="text" id="username" />
         <label htmlFor="age">Age(Years):</label>
         <input type="number" id="age" />
       </form>
-    </div>
+    </Card>
   );
 };
 
