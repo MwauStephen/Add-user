@@ -15,7 +15,7 @@ const AddUser = (props) => {
   };
   return (
     <Card className={styles.input}>
-      <form>
+      <form onSubmit={addFormHandler}>
         <label htmlFor="username">Username:</label>
         <input type="text" id="username" onChange={addNameHandler} />
         <label htmlFor="age">Age(Years):</label>
