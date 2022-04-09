@@ -16,11 +16,14 @@ const AddUser = (props) => {
       return;
     }
 
-    // Check for age to be  > 1
+    // 2.Check for age to be  > 1
     if (enteredAge < 1) {
       return;
     }
 
+    // 3.Clear the form inputs on submit
+    setEnteredName("");
+    setEnteredAge("");
     console.log(enteredName, enteredAge);
   };
 
@@ -37,9 +40,19 @@ const AddUser = (props) => {
     <Card className={styles.input}>
       <form onSubmit={addUserHandler}>
         <label htmlFor="username">Username:</label>
-        <input type="text" id="username" onChange={addNameHandler} />
+        <input
+          type="text"
+          id="username"
+          onChange={addNameHandler}
+          value={enteredName}
+        />
         <label htmlFor="age">Age(Years):</label>
-        <input type="number" id="age" onChange={addAgeHandler} />
+        <input
+          type="number"
+          id="age"
+          onChange={addAgeHandler}
+          value={enteredAge}
+        />
         <Button type="submit">Add user</Button>
       </form>
     </Card>
