@@ -5,7 +5,15 @@ import styles from "./UsersList.module.css";
 const UsersList = (props) => {
   return (
     <Card className={styles.users}>
-      <ul></ul>
+      <ul>
+        {props.users.map((user) => {
+          return (
+            <li>
+              {user.name} ({user.age} Years old)
+            </li>
+          );
+        })}
+      </ul>
     </Card>
   );
 };
