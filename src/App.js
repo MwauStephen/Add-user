@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <AddUser />
-      <UsersList users={[UsersList]} />
+      <UsersList />
     </div>
   );
 }
