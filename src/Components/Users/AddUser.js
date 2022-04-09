@@ -25,7 +25,8 @@ const AddUser = (props) => {
     setEnteredName("");
     setEnteredAge("");
 
-    // 4.Lifiting state up 
+    // 6.Lifiting state up
+    props.onAddUser(enteredName, enteredAge);
     // console.log(enteredName, enteredAge);
   };
 
