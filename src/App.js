@@ -8,16 +8,15 @@ function App() {
   const [userList, setUserList] = useState([]);
 
   // 6.Lifting state up in parent
-  const addUserLiftHandler=(upliftedUserName,upliftedUserAge)=>{
-    setUserList((prevUserList)=>{
-      return [...prevUserList,{
-        name:upliftedUserName,
-        age:upliftedUserAge
-      }]
-    })
-      
-    }
-  }
+  const addUserLiftHandler = (upliftedUserName, upliftedUserAge) => {
+    setUserList((prevUserList) => {
+      return [
+        ...prevUserList,
+        { name: upliftedUserName, age: upliftedUserAge },
+      ];
+    });
+  };
+
   return (
     <div>
       <AddUser onAddUser={addUserLiftHandler} />
