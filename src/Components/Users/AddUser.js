@@ -9,17 +9,18 @@ const AddUser = (props) => {
 
   const addUserHandler = (event) => {
     event.preventDefault();
+    // console.log("You submitted");
 
-    // console.log(enteredName, enteredAge);
+    console.log(enteredName, enteredAge);
   };
 
   const addNameHandler = (event) => {
-    console.log(event.target.value);
-    // setEnteredName(event.target.value);
+    // console.log(event.target.value);
+    setEnteredName(event.target.value);
   };
   const addAgeHandler = (event) => {
-    console.log(event.target.value);
-    // setEnteredAge(event.target.value);
+    // console.log(event.target.value);
+    setEnteredAge(event.target.value);
   };
 
   return (
