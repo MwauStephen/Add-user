@@ -16,6 +16,11 @@ const AddUser = (props) => {
       return;
     }
 
+    // Check for age to be  > 1
+    if (enteredAge < 1) {
+      return;
+    }
+
     console.log(enteredName, enteredAge);
   };
 
