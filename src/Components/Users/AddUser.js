@@ -24,7 +24,9 @@ const AddUser = (props) => {
     // 3.Clear the form inputs on submit
     setEnteredName("");
     setEnteredAge("");
-    console.log(enteredName, enteredAge);
+
+    // 4.Lifiting state up 
+    // console.log(enteredName, enteredAge);
   };
 
   const addNameHandler = (event) => {
