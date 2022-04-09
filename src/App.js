@@ -12,7 +12,11 @@ function App() {
     setUserList((prevUserList) => {
       return [
         ...prevUserList,
-        { name: upliftedUserName, age: upliftedUserAge },
+        {
+          name: upliftedUserName,
+          age: upliftedUserAge,
+          id: Math.random.toString(),
+        },
       ];
     });
   };
