@@ -4,12 +4,12 @@ import AddUser from "./Components/Users/AddUser";
 import UsersList from "./Components/Users/UsersList";
 
 function App() {
-
-  // 
+  // 5.adde user inputs to an array using state
+  const [userList, setUserList] = useState([]);
   return (
     <div>
       <AddUser />
-      <UsersList />
+      <UsersList users={userList} />
     </div>
   );
 }
