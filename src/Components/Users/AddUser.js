@@ -11,6 +11,11 @@ const AddUser = (props) => {
     event.preventDefault();
     // console.log("You submitted");
 
+    //1.Check for the validity of the form(username and age)
+    if (enteredName.trim().length === 0 || enteredAge.trim().length === 0) {
+      return;
+    }
+
     console.log(enteredName, enteredAge);
   };
 
