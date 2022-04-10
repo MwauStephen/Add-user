@@ -10,7 +10,9 @@ const ErrorModal = () => {
       <div>
         <p>Please enter a valid input</p>
       </div>
-      <footer></footer>
+      <footer>
+        <Button>Okay</Button>
+      </footer>
     </div>
   );
 };
