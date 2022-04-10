@@ -59,6 +59,7 @@ const AddUser = (props) => {
 
   return (
     <div>
+      {/* 9.check for empty submission using truthy values */}
       {errorModal && (
         <ErrorModal
           modalTitle={errorModal.modalTitle}
@@ -66,6 +67,7 @@ const AddUser = (props) => {
           onConfirm={errorHandler}
         />
       )}
+
       <Card className={styles.input}>
         <form onSubmit={addUserHandler}>
           <label htmlFor="username">Username:</label>
