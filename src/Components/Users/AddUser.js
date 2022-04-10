@@ -17,6 +17,10 @@ const AddUser = (props) => {
 
     //1.Check for the validity of the form(username and age)
     if (enteredName.trim().length === 0 || enteredAge.trim().length === 0) {
+      setErrorModal({
+        modalTitle: "Invalid input",
+        modalMessage: "Please enter a valid name and age (non-empty values) ",
+      });
       return;
     }
 
