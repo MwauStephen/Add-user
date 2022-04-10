@@ -8,6 +8,9 @@ const AddUser = (props) => {
   const [enteredName, setEnteredName] = useState("");
   const [enteredAge, setEnteredAge] = useState("");
 
+  // 7.managing state for the error modal
+  const [errorModal, setErrorModal] = useState("");
+
   const addUserHandler = (event) => {
     event.preventDefault();
     // console.log("You submitted");
