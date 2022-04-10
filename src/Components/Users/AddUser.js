@@ -45,6 +45,7 @@ const AddUser = (props) => {
 
   return (
     <div>
+      <ErrorModal modalTitle="" modalMessage="" />
       <Card className={styles.input}>
         <form onSubmit={addUserHandler}>
           <label htmlFor="username">Username:</label>
@@ -64,7 +65,6 @@ const AddUser = (props) => {
           <Button type="submit">Add user</Button>
         </form>
       </Card>
-      <ErrorModal />
     </div>
   );
 };
