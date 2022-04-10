@@ -17,8 +17,8 @@ const AddUser = (props) => {
     }
 
     // 2.Check for age to be  > 1
-    if (enteredAge < 1) {
-      return;
+    if (+enteredAge < 1) {
+      console.log(enteredAge);
     }
 
     // 3.Clear the form inputs on submit
