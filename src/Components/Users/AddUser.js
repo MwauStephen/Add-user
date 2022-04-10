@@ -17,6 +17,7 @@ const AddUser = (props) => {
 
     //1.Check for the validity of the form(username and age)
     if (enteredName.trim().length === 0 || enteredAge.trim().length === 0) {
+      // 7.modal display message on empty inputs
       setErrorModal({
         modalTitle: "Invalid input",
         modalMessage: "Please enter a valid name and age (non-empty values) ",
@@ -26,7 +27,12 @@ const AddUser = (props) => {
 
     // 2.Check for age to be  > 1
     if (+enteredAge < 1) {
-      console.log(enteredAge);
+      // 8.modal display message on age < 0
+      setErrorModal({
+        modalTitle: "Invalid age input",
+        modalMessage: "Please enter a valid age (age >0) ",
+      });
+      return;
     }
 
     // 3.Clear the form inputs on submit
@@ -47,9 +53,17 @@ const AddUser = (props) => {
     setEnteredAge(event.target.value);
   };
 
+  const errorHandler = () => {
+    setErrorModal(null);
+  };
+
   return (
     <div>
-      <ErrorModal modalTitle="" modalMessage="" />
+      <ErrorModal
+        modalTitle={errorModal.modalTitle}
+        modalMessage={errorModal.modalMessage}
+        onConfirm={errorHandler}
+      />
       <Card className={styles.input}>
         <form onSubmit={addUserHandler}>
           <label htmlFor="username">Username:</label>
